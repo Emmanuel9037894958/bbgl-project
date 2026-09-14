@@ -1,26 +1,485 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap");
+
 @import "tailwindcss";
 
+/* =========================
+   BBGL DESIGN TOKENS
+========================= */
+
 :root {
+  --bbgl-navy: #071a2d;
+  --bbgl-blue: #0b3d6e;
+  --bbgl-blue-light: #145a96;
+
+  --bbgl-green: #059669;
+  --bbgl-green-dark: #047857;
+  --bbgl-green-light: #ecfdf5;
+
+  --bbgl-white: #ffffff;
+  --bbgl-off-white: #f7f8fa;
+  --bbgl-light: #eef1f4;
+  --bbgl-border: #dfe4e8;
+
+  --bbgl-text: #111827;
+  --bbgl-text-muted: #667085;
+
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #111827;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* =========================
+   GLOBAL RESET
+========================= */
+
+* {
+  box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
+  margin: 0;
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "DM Sans", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+p {
+  margin: 0;
+}
+
+/* =========================
+   HEADINGS
+========================= */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-family: "Manrope", sans-serif;
+  letter-spacing: -0.025em;
+}
+
+/* =========================
+   CONTAINER
+========================= */
+
+.bbgl-container {
+  width: min(100% - 32px, 1240px);
+  margin-inline: auto;
+}
+
+@media (min-width: 768px) {
+  .bbgl-container {
+    width: min(100% - 64px, 1240px);
+  }
+}
+
+/* =========================
+   SECTIONS
+========================= */
+
+.bbgl-section {
+  padding: 80px 0;
+}
+
+@media (min-width: 768px) {
+  .bbgl-section {
+    padding: 110px 0;
+  }
+}
+
+/* =========================
+   EYEBROW
+========================= */
+
+.bbgl-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 18px;
+
+  color: var(--bbgl-blue);
+
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.bbgl-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  min-height: 50px;
+  padding: 0 22px;
+
+  border: 1px solid transparent;
+  border-radius: 4px;
+
+  font-size: 0.9rem;
+  font-weight: 700;
+
+  transition:
+    background-color 180ms ease,
+    color 180ms ease,
+    border-color 180ms ease,
+    transform 180ms ease;
+}
+
+.bbgl-button:hover {
+  transform: translateY(-1px);
+}
+
+/* Primary */
+
+.bbgl-button-primary {
+  background: var(--bbgl-navy);
+  color: #ffffff;
+}
+
+.bbgl-button-primary:hover {
+  background: var(--bbgl-blue);
+}
+
+/* Outline */
+
+.bbgl-button-outline {
+  border-color: rgba(255, 255, 255, 0.45);
+  color: #ffffff;
+  background: transparent;
+}
+
+.bbgl-button-outline:hover {
+  border-color: #ffffff;
+  background: #ffffff;
+  color: var(--bbgl-navy);
+}
+
+/* Green */
+
+.bbgl-button-green {
+  background: var(--bbgl-green);
+  color: #ffffff;
+}
+
+.bbgl-button-green:hover {
+  background: var(--bbgl-green-dark);
+}
+
+/* =========================
+   IMAGE PLACEHOLDER
+========================= */
+
+.bbgl-image-placeholder {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 280px;
+
+  overflow: hidden;
+
+  background: #f3f5f7;
+  border: 1px solid var(--bbgl-border);
+}
+
+.bbgl-image-placeholder::after {
+  content: "BBGL IMAGE";
+
+  position: absolute;
+
+  color: #98a2b3;
+
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+}
+
+/* =========================
+   CORPORATE CARD
+========================= */
+
+.bbgl-card {
+  background: #ffffff;
+  border: 1px solid var(--bbgl-border);
+
+  transition:
+    border-color 200ms ease,
+    box-shadow 200ms ease,
+    transform 200ms ease;
+}
+
+.bbgl-card:hover {
+  border-color: #cbd3da;
+
+  box-shadow: 0 16px 40px rgba(7, 26, 45, 0.08);
+
+  transform: translateY(-3px);
+}
+
+/* =========================
+   DARK SECTION
+========================= */
+
+.bbgl-dark-section {
+  background: var(--bbgl-navy);
+  color: #ffffff;
+}
+
+/* =========================
+   ACCESSIBILITY
+========================= */
+
+:focus-visible {
+  outline: 2px solid var(--bbgl-green);
+  outline-offset: 3px;
+}
+
+::selection {
+  background: var(--bbgl-navy);
+  color: #ffffff;
+}
+
+/* =========================
+   BBGL MARQUEE / TICKER
+========================= */
+
+@keyframes bbgl-marquee {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-bbgl-marquee {
+  animation: bbgl-marquee 38s linear infinite;
+  will-change: transform;
+}
+
+.animate-bbgl-marquee:hover {
+  animation-play-state: paused;
+}
+
+@media (max-width: 640px) {
+  .animate-bbgl-marquee {
+    animation-duration: 28s;
+  }
+}
+
+/* =========================
+   BBGL SITE LOADER
+========================= */
+
+/* Reverse rotating ring */
+
+@keyframes loaderReverse {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+/* Orbiting light */
+
+@keyframes loaderOrbit {
+  from {
+    transform: rotate(0deg) translateX(50px) rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg) translateX(50px) rotate(-360deg);
+  }
+}
+
+.animate-loader-reverse {
+  animation: loaderReverse 3s linear infinite;
+}
+
+.animate-loader-orbit {
+  animation: loaderOrbit 2.4s linear infinite;
+}
+
+/* =========================
+   SMOOTH IMAGE EFFECTS
+========================= */
+
+.bbgl-image-zoom {
+  overflow: hidden;
+}
+
+.bbgl-image-zoom img {
+  transition: transform 500ms ease;
+}
+
+.bbgl-image-zoom:hover img {
+  transform: scale(1.04);
+}
+
+/* =========================
+   CORPORATE UNDERLINE
+========================= */
+
+.bbgl-link {
+  position: relative;
+  display: inline-block;
+}
+
+.bbgl-link::after {
+  content: "";
+
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+
+  width: 0;
+  height: 1px;
+
+  background: var(--bbgl-green);
+
+  transition: width 220ms ease;
+}
+
+.bbgl-link:hover::after {
+  width: 100%;
+}
+
+/* =========================
+   SUBTLE CORPORATE GRID
+========================= */
+
+.bbgl-grid-background {
+  background-image:
+    linear-gradient(
+      rgba(11, 61, 110, 0.035) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(11, 61, 110, 0.035) 1px,
+      transparent 1px
+    );
+
+  background-size: 70px 70px;
+}
+
+/* =========================
+   SOFT GREEN GLOW
+========================= */
+
+.bbgl-green-glow {
+  box-shadow:
+    0 0 0 1px rgba(16, 185, 129, 0.05),
+    0 20px 60px rgba(16, 185, 129, 0.08);
+}
+
+/* =========================
+   CORPORATE DIVIDER
+========================= */
+
+.bbgl-divider {
+  width: 100%;
+  height: 1px;
+  background: var(--bbgl-border);
+}
+
+/* =========================
+   SCROLLBAR
+========================= */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 480px) {
+  .bbgl-section {
+    padding: 64px 0;
+  }
+
+  .bbgl-container {
+    width: min(100% - 28px, 1240px);
+  }
+}
+
+/* =========================
+   REDUCED MOTION
+========================= */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .animate-bbgl-marquee {
+    animation: none;
+  }
 }
