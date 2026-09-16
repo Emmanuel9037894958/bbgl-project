@@ -201,7 +201,7 @@ export default function AboutPage() {
             {/* CEO Image */}
             <div className="relative min-h-[420px] bg-[#071a2d] lg:col-span-5 lg:min-h-full">
               <Image
-                src="/ceo.jpg"
+                src="/ceo2.jpg"
                 alt="Ibaki Obidike Jerry - Founder & President of BBGL"
                 fill
                 priority
