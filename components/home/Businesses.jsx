@@ -11,7 +11,7 @@ const businesses = [
     description:
       "A core BBGL business operating within the oil and gas sector, providing products and services across the energy market.",
     logo: "/logo2.png",
-    images: ["/image2.jpg", "/oil2.jpg", "/Oil3.jpg"],
+    images: ["/image2.jpg", "/oil2.jpg", "/oil3.jpg"],
     slug: "don-baki-oil-gas",
   },
   {
