@@ -22,7 +22,7 @@ const capabilities = [
 
 export default function CorporateCapabilities() {
   return (
-    <section className="relative overflow-hidden bg-slate-50 py-20 sm:py-24 lg:py-28">
+    <section className="relative overflow-hidden bg-slate-50 py-14 sm:py-24 lg:py-28">
       {/* Subtle background detail */}
       <div className="pointer-events-none absolute -left-40 top-1/2 h-[420px] w-[420px] -translate-y-1/2 rounded-full bg-emerald-500/5 blur-[110px]" />
 
@@ -40,7 +40,7 @@ export default function CorporateCapabilities() {
       <div className="relative mx-auto w-full max-w-[1440px] px-5 sm:px-8 lg:px-12">
         {/* Section heading */}
         <div className="max-w-3xl">
-          <div className="mb-5 flex items-center gap-3">
+          <div className="mb-5 flex items-center gap-1">
             {/* <span className="h-px w-10 bg-emerald-600" /> */}
 
             <p className="text-[10px] font-black uppercase tracking-[0.22em] text-emerald-700 sm:text-xs">
