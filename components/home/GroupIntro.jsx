@@ -14,20 +14,10 @@ export default function GroupIntro() {
             </span>
           </div>
 
-          {/* Heading */}
-          <h2 className="max-w-4xl text-3xl font-extrabold leading-[1.12] tracking-[-0.02em] text-[#071a2d] sm:text-4xl md:text-5xl lg:text-[3.5rem]">
-            A diversified group built around{" "}
-            <span className="text-[#0b3d6e]">
-              long-term value.
-            </span>
-          </h2>
-
           {/* Description */}
           <div className="mt-7 max-w-3xl space-y-5">
             <p className="text-base leading-8 text-[#667085] md:text-[17px]">
-              Baki Business Group Limited is a diversified business group
-              with interests spanning multiple sectors through its
-              subsidiaries and associated ventures.
+             Baki Business Group Limited is a growing business group with interests across multiple sectors through its subsidiaries and associated businesses.
             </p>
 
             <p className="text-base leading-8 text-[#667085] md:text-[17px]">

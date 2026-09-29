@@ -8,7 +8,7 @@ const focusAreas = [
   "Baki Oil & Gas",
   "BBGL Beverage Company",
   "Automotive Batteries",
-  "Healthcare Distribution",
+  "Top Talk Technology",
 ];
 
 export default function CorporateSnapshot() {
