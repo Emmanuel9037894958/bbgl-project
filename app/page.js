@@ -3,7 +3,7 @@ import MarketTicker from "@/components/layout/MarketTicker";
 // import Footer from "@/components/layout/Footer";
 import Hero from "@/components/home/Hero";
 import GroupIntro from "@/components/home/GroupIntro";
-import Businesses from "@/components/home/Businesses";
+import Businesses from "./businesses/page";
 import Vision from "@/components/home/Vision";
 import ContactCTA from "@/components/home/ContactCTA";
 import CorporateSnapshot from "@/components/home/CorporateSnapshot";
