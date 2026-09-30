@@ -63,11 +63,11 @@ export default function CorporateCapabilities() {
         </div>
 
         {/* Capabilities */}
-        <div className="mt-14 border-y border-slate-200 lg:mt-20">
+        <div className=" border-y border-slate-200 lg:mt-20">
           {capabilities.map((capability, index) => (
             <div
               key={capability.title}
-              className={`group grid gap-6 py-8 sm:py-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-center lg:gap-10 ${
+              className={`group grid gap-6 py-3 sm:py-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-center lg:gap-10 ${
                 index !== capabilities.length - 1
                   ? "border-b border-slate-200"
                   : ""

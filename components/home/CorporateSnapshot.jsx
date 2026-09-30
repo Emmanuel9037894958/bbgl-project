@@ -117,7 +117,7 @@ export default function CorporateSnapshot() {
         </div>
 
         {/* CORPORATE FOCUS */}
-        <div className="mt-14 border-t border-white/10 pt-7 sm:mt-16">
+        <div className="mt-1 border-t border-white/10 pt-7 sm:mt-16">
           <div className="flex flex-wrap items-center gap-x-6 gap-y-3 text-[10px] font-bold uppercase tracking-[0.16em] text-slate-500 sm:text-xs">
             <span>Business Development</span>
 

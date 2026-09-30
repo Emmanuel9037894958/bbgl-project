@@ -22,7 +22,7 @@ export default function Home() {
         <GroupIntro />
         <CorporateSnapshot />
         <CorporateCapabilities />
-        <Vision />
+        {/* <Vision /> */}
         <CorporateFAQ />
         <ContactCTA />
       </main>

@@ -114,14 +114,14 @@ function BusinessImageSlider({ images, name }) {
 
 export default function Businesses() {
   return (
-    <section className="relative overflow-hidden bg-[#f7f9fc] py-1 md:py-28 lg:py-32">
+    <section className="relative overflow-hidden bg-[#f7f9fc] md:py-28 lg:py-32">
       <div className="bbgl-container">
 
         {/* HEADER */}
         <div className="flex flex-col justify-between gap-8 md:flex-row md:items-end">
           <div className="max-w-3xl">
             <div className="mb-5 flex items-center gap-3">
-              <span className="text-xs pt-7 font-bold uppercase tracking-[0.24em] text-[#c79a45]">
+              <span className="text-xs py-3 font-bold uppercase tracking-[0.24em] text-[#c79a45]">
                 Our Businesses
               </span>
             </div>
@@ -129,7 +129,7 @@ export default function Businesses() {
         </div>
 
         {/* BUSINESS CARDS */}
-        <div className="mt-8 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div className=" grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {businesses.map((business) => (
             <Link
               key={business.slug}
