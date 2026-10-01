@@ -242,13 +242,13 @@ export default function AboutPage() {
               <div className="absolute inset-0 bg-gradient-to-t from-[#071a2d]/80 via-transparent to-transparent" />
 
               <div className="absolute bottom-7 left-7 right-7">
+                <h3 className="mt-2 text-2xl font-bold text-white sm:text-3xl">
+                  Ibaki Obidike Jerry (FIOGR)
+                </h3>
                 <p className="text-sm font-semibold uppercase tracking-widest text-[#c79a45]">
                   Founder & President
                 </p>
 
-                <h3 className="mt-2 text-2xl font-bold text-white sm:text-3xl">
-                  Ibaki Obidike Jerry
-                </h3>
               </div>
             </div>
 
